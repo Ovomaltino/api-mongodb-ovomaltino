@@ -15,6 +15,7 @@ const AgentSchema: Schema = new Schema<iAgentDB> (
       action: { type: Schema.Types.Mixed, required: true }
     }],
     sanctions: [{
+      input_value: { type: Schema.Types.Mixed, required: true },
       action: { type: Schema.Types.Mixed, required: true },
       level: { type: Number, required: true }
     }],
