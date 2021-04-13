@@ -12,9 +12,10 @@ const AgentSchema: Schema = new Schema<iAgentDB> (
     memory: [{
       isLearner: { type: Boolean, required: true },
       inputValue: { type: Schema.Types.Mixed, required: true },
-      action: { type: String, required: true }
+      action: { type: Schema.Types.Mixed, required: true }
     }],
     sanctions: [{
+      input_value: { type: Schema.Types.Mixed, required: true },
       action: { type: Schema.Types.Mixed, required: true },
       level: { type: Number, required: true }
     }],
