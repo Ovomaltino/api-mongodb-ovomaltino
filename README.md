@@ -1,43 +1,51 @@
-# Velh-IA API
+# Ovomaltino - API-MongoDB template
 
-Where all data is managed
+Store your Ovomaltino data using an API with MongoDB
 
 ### Sumary
-1. [Description](https://github.com/ccr5/Velh-IA/tree/master/velhia.api#description "Description")
-2. [Structure](https://github.com/ccr5/Velh-IA/tree/master/velhia.api#structure "Structure")
-3. [Language and tools](https://github.com/ccr5/Velh-IA/tree/master/velhia.api#langauge-and-tools "Language and tools")
-4. [Requirements](https://github.com/ccr5/Velh-IA/tree/master/velhia.api#requirements "Requirements")
-5. [Usage](https://github.com/ccr5/Velh-IA/tree/master/velhia.api#usage "Usage")
+1. [Description](https://github.com/Ovomaltino/api-mongodb-ovomaltino#description "Description")
+2. [Structure](https://github.com/Ovomaltino/api-mongodb-ovomaltino#structure "Structure")
+3. [Language and tools](https://github.com/Ovomaltino/api-mongodb-ovomaltino#langauge-and-tools "Language and tools")
+4. [Requirements](https://github.com/Ovomaltino/api-mongodb-ovomaltino#requirements "Requirements")
+5. [Usage](https://github.com/Ovomaltino/api-mongodb-ovomaltino#usage "Usage")
 
 ------------
 ### Description
-This is a microservice to provide a RESTFul API to save and get data to show or make analysis.
+This is a microservice to provide a RESTFul API to save and get ovomaltino package data.
 
 ### Structure
-* tests: all project's test
-* src: project's root directory
-* config: all project configuration (Ex: Database Connection, Routes)
-* domain: all entity, model, etc to organize and use (Ex: Interfaces, Enum, Entities)
-* repository: all mongodb methods
-* useCases/**entityFolder**: all logic entity files
-* utils: others files
+This template use clean archicture.
 
 ### Language and Tools
-1. Typescript
-2. NodeJS
-3. Express
-4. Dotenv
-5. Tsyringe
-6. Mongoose
-7. Jest
+* Typescript
+* NodeJS
+* Express
+* Dotenv
+* Tsyringe
+* Mongoose
+* Jest
 
 ### Requirements
-1. Mongo
-2. Yarn
-3. NodeJS
+* Mongo
+* Yarn
+* NodeJS
 
 ### Usage
-1. run cd velhia.api
-2. run yarn
-3. Change environment variables
-3. run yarn serve 
+
+##### Local (Yarn)
+1. install project dependencies
+```bash
+yarn
+```
+2. Change environment variables (.env file)
+3. run start script
+```bash
+yarn serve
+```
+
+##### Docker
+```bash
+docker run -e PORT=3005 \ 
+-e DATABASE_CONNECTION_STRING=mongodb://localhost:27017/ovomaltino \
+-p 3005:3005 -d ovomaltino/api-mongo
+``` 
